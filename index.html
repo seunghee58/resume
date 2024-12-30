@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://scccurri.github.io/portfolio/index.html" />
+  <meta property="og:title" content="한승희 이력서" />
+  <meta property="og:image" content="image/OGimage.png" />
+  <meta property="og:description" content="한승희 이력서입니다." />
+  <meta property="og:site_name" content="SCC Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <title>한승희 이력서</title>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    :root {
+      --main-organization-color: #222425;
+      --sub-organization-color: #d3d3d3;
+      --main-svg-filter: invert(12%) sepia(6%) saturate(445%) hue-rotate(156deg) brightness(99%) contrast(94%);
+      --main-bg-color: #f5f5f5;
+      --main-font-color: #222425;
+      --secondary-font-color: #5f666b;
+      --highlight-color: #ffffff;
+      --shadow-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .font-regular {
+      font-family: "NanumSquareOTF-Regular", Helvetica;
+      font-weight: 400;
+    }
+
+    .svg-filter {
+      filter: var(--main-svg-filter);
+    }
+
+    .font-bold {
+      font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+      font-weight: 700;
+    }
+
+    .font-extra-bold {
+      font-family: var(--font-family-bold);
+      font-weight: var(--font-weight-extra-bold);
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+    }
+
+    .size-full {
+      width: 100%;
+      height: 100%;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url("image/bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .background {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .frame {
+      max-width: 93.75rem;
+      height: auto;
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      padding: 4.38rem 1.25rem;
+      align-items: flex-start;
+    }
+
+    .side-bar {
+      width: 19.5rem;
+      flex-shrink: 0;
+      height: auto;
+      background-color: var(--main-bg-color);
+      border-radius: 1.25rem;
+      box-shadow: 0 0.25rem 0.25rem var(--shadow-color);
+      padding-bottom: 1.88rem;
+      position: sticky;
+      top: 4.38rem;
+      align-self: flex-start;
+    }
+
+    .side-bar-profile {
+      position: relative;
+      width: 15rem;
+      height: 15rem;
+      margin-top: 1.88rem;
+      margin-left: 2.25rem;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .side-bar-profile-picture {
+      object-fit: cover;
+      object-position: center 20%;
+      transform: scale(1.1) translateY(5%);
+      transition: transform 0.3s ease;
+    }
+
+    .side-bar-profile:hover .side-bar-profile-picture {
+      transform: scale(1.15) translateY(2%);
+    }
+
+    .name-tag {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .name {
+      position: relative;
+      width: 100%;
+      color: var(--main-organization-color);
+      font-size: 2.944375rem;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+      word-break: break-word;
+    }
+
+    .sub-name {
+      position: relative;
+      width: 100%;
+      margin-top: 0.625rem;
+      color: #81898f;
+      font-size: 1.13125rem;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+      word-break: break-word;
+    }
+
+    .info {
+      position: relative;
+      width: 15rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+      padding-bottom: 1rem;
+    }
+
+    .info-detail {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.625rem;
+    }
+
+    .info-detail-icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5625rem;
+      flex-shrink: 0;
+    }
+
+    .info-detail-exp {
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      letter-spacing: 0;
+      line-height: 1rem;
+      word-break: break-word;
+      flex-grow: 1;
+    }
+
+    .strength-set {
+      position: relative;
+      width: 14.9375rem;
+      height: 5.75rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .strength {
+      width: 4.5rem;
+      height: 5.75rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .strength-img {
+      width: 4.375rem;
+      height: 4.25rem;
+      margin-bottom: 0.5625rem;
+    }
+
+    .strength-text {
+      color: var(--secondary-font-color);
+      font-size: 0.6875rem;
+      line-height: 1.2;
+    }
+
+    .line {
+      position: relative;
+      width: 15.0625rem;
+      height: 0.05rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+      background: rgba(34, 36, 37, 0.2);
+    }
+
+    .skill {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .skill-title {
+      position: relative;
+      height: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-title-img {
+      width: 0.8125rem;
+      height: 0.8125rem;
+      position: absolute;
+      left: 0;
+      top: 0.125rem;
+    }
+
+    .skill-title-text {
+      position: absolute;
+      width: 13.5rem;
+      top: 0;
+      left: 1.4375rem;
+      color: var(--secondary-font-color);
+      font-size: 0.70625rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .skill-item {
+      margin-bottom: 0.75rem;
+      position: relative;
+      clear: both;
+    }
+
+    .skill-set {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .point {
+      width: 0.4375rem;
+      height: 0.4375rem;
+      background-color: var(--main-font-color);
+      border-radius: 0.23125rem;
+      margin-right: 0.5rem;
+    }
+
+    .skill-text {
+      color: var(--main-font-color);
+      font-size: 0.78125rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .skill-bar {
+      width: 14.5625rem;
+      height: 0.875rem;
+      background-color: var(--highlight-color);
+      border-radius: 0.588125rem;
+      box-shadow: 0 0.078125rem 0.24375rem var(--shadow-color);
+      margin-top: 0.625rem;
+      position: relative;
+    }
+
+    .skill-bar-progress {
+      position: absolute;
+      height: 0.875rem;
+      left: 0.4375rem;
+    }
+
+    .skill-bar-rectangle {
+      position: absolute;
+      height: 0.375rem;
+      top: 0.25rem;
+      left: 0;
+      background-color: var(--main-organization-color);
+      border-radius: 0.509375rem;
+    }
+
+    .skill-bar-o1 {
+      position: absolute;
+      width: 0.875rem;
+      height: 0.875rem;
+      top: 0;
+      background-color: var(--highlight-color);
+      border-radius: 0.43125rem;
+      box-shadow: 0 0 0.156875rem #00000026;
+    }
+
+    .skill-bar-o2 {
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 0.1875rem;
+      background-color: var(--main-organization-color);
+      border-radius: 0.234375rem;
+    }
+
+    .education {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .education-title {
+      position: relative;
+      height: 0.9375rem;
+      margin: 1rem 0 1rem 0;
+    }
+
+    .education-text {
+      position: relative;
+      width: 13.5rem;
+      margin-left: 1.5625rem;
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .education-img {
+      position: absolute;
+      width: 0.9375rem;
+      height: 0.71875rem;
+      top: 0.125rem;
+      left: 0;
+    }
+
+    .education-name {
+      color: var(--main-font-color);
+      font-size: 1.0275rem;
+      line-height: normal;
+      margin-bottom: 0.625rem;
+      text-align: left;
+    }
+
+    .education-detail {
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      line-height: normal;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body class="w-full">
+  <div class="background w-full">
+    <div class="frame w-full">
+      <!-- side-bar -->
+      <div class="side-bar">
+        <div class="side-bar-profile">
+          <img class="side-bar-profile-picture size-full" src="image/profile_image.png" />
+        </div>
+        <div class="name-tag">
+          <div class="name font-bold">한승희</div>
+          <div class="sub-name font-regular">백엔드 개발자</div>
+        </div>
+        <div class="info">
+          <div class="info-detail">
+            <object class="info-detail-icon svg-filter" data="image/detail-1.svg" color="red"></object>
+            <div class="info-detail-exp font-regular">
+              
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-2.svg" />
+            <div class="info-detail-exp font-regular">
+              1993.05.08 / 서울 강서구
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-3.svg" />
+            <div class="info-detail-exp font-regular">
+              zzuggumee@gmail.com
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-4.svg" />
+            <div class="info-detail-exp font-regular">010-5060-0508</div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="strength-set">
+          <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-1.png" />
+            <div class="strength-text font-regular">도전정신</div>
+          </div>
+          <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-2.png" />
+            <div class="strength-text font-regular">실행력</div>
+          </div>
+          <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-3.png" />
+            <div class="strength-text font-regular">의사소통</div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="skill">
+          <div class="skill-title w-full">
+            <img class="skill-title-img svg-filter" src="image/skill-title.svg" />
+            <div class="skill-title-text font-regular">SKILL SET</div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">1</div>
+            </div>
+            <div class="skill-bar" data-progress="60">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">2</div>
+            </div>
+            <div class="skill-bar" data-progress="80">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">3</div>
+            </div>
+            <div class="skill-bar" data-progress="70">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">4</div>
+            </div>
+            <div class="skill-bar" data-progress="80">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">5</div>
+            </div>
+            <div class="skill-bar" data-progress="80">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="education">
+          <div class="education-title w-full">
+            <img class="education-img svg-filter" src="image/education.svg" />
+            <div class="education-text font-regular">EDUCATION</div>
+          </div>
+          <div class="education-content w-full">
+            <div class="education-name font-bold">서울 디자인 고등학교</div>
+            <p class="education-detail font-regular">
+              2009.03.02 ~ 2012.02.14 / 서울시 마포구
+            </p>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+      <!-- main content -->
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setupSkillBars();
+      setLanguageAndMode();
+    });
+
+    function setupSkillBars() {
+
+      const skillBars = document.querySelectorAll(".skill-bar");
+      skillBars.forEach((bar) => {
+        const progress = bar.getAttribute("data-progress");
+        bar.style.setProperty("--progress", progress);
+
+        const progressBar = bar.querySelector(".skill-bar-progress");
+        progressBar.style.width = `calc((100% - 14px) * ${progress} / 100)`;
+
+        const rectangle = bar.querySelector(".skill-bar-rectangle");
+        rectangle.style.width = `calc(100% - 5px)`;
+
+        const o1 = bar.querySelector(".skill-bar-o1");
+        const o2 = bar.querySelector(".skill-bar-o2");
+        o1.style.left = `calc(100% - 14px)`;
+        o2.style.left = `calc(100% - 11px)`;
+      });
+    }
+  </script>
+</body>
+
+</html>
